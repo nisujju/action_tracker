@@ -6,10 +6,10 @@ Below are Model Details and DB structure
 
 Model 1:- User table. /model/user.rb  --> this holds the user name
 
-|User Name   |
-|------------|
-|abc	     |
-|xyz         |
+<table>
+<th>User Name</th>
+<tr><td>abc</td></tr>
+<tr><td>xyz</td></tr>
 
 Model 2:- ActionList. /model/action_list.rb --> this holds the action label and description.
 
