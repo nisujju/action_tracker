@@ -10,20 +10,20 @@ Model 1:- User table. /model/user.rb  --> this holds the user name
 
 Model 2:- ActionList. /model/action_list.rb --> this holds the action label and description.
 
-|Name   |  Description  |
-|-------|---------------|
+|--Name--|--Description--|
+
 
 Model 3:- LogAction. /model/log_action.rb  --> This is a join table for many to many relationship between model 1 and model 2.
 A user has many task and task has many users through log_actions table. All the actions that user will be logging thru will be
 stored in this table. To achieve the first part of this task we have log_task method inside log_actions_controller. Each user can enter his task in its show page. Form can be seen in /views/users/show.html.erb.
 
-| User_id  | Action_list_id  | created_at  |
-|----------|-----------------|-------------|
+|--User_id--|--Action_list_id--|--created_at--|
+
 
 Model 3:- AnalyseAction. /model/analyse_action.rb. --> This table contains pair of an action with all other action. Action_name1 columns pairs with action_name2 column and for each action_name1 the count of occurence of action_name2 w.r.t immediate, weekly, monthly, yearly and lifetime is stored in respective columns. If there are two actions namely "A" and "B" than below is the table example. The below table shows that action B occured 2 times immediately w.r.t A and action A occurred 3 times immediately w.r.t action B.
 
-| Action Name1 | Action Name2 | Immediate | Weekly | Monthly | Yearly | Lifetime |
-|--------------|--------------|-----------|--------|---------|--------|----------|
+|--Action Name1--|--Action Name2--|--Immediate--|--Weekly--|--Monthly--|--Yearly--|--Lifetime--|
+
 
 To check how Analyse Action will work please visit https://pure-thicket-67263.herokuapp.com/action_lists and select Task A analysis. Each time a new action is added to action_list table the pairing of the new action with every other action is taken care by add_analyse method inside /helpers/analyse_actions_helper.rb. This is called by create action inside action_lists_controller. Every pairs are stored in this model.
 
