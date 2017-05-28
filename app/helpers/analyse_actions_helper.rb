@@ -61,7 +61,6 @@ module AnalyseActionsHelper
 		  end
 		  new_arr << z
 		end
-		debugger
 		new_arr
 		# new_arr.transpose
 	end
