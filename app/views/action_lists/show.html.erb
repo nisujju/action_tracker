@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<h1>Below table shows probability of associated actions </h1>
+<p>
+  <strong>Action Name:</strong>
+  <%= @action_list.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @action_list.description %>
+</p>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Action Name</th>
+    <th>Immideate Probability</th> 
+    <th>Weekly Probability</th>
+    <th>Monthly Probability</th>
+    <th>Yearly Probability</th>
+    <th>Lifetime Probability</th>
+  </tr>
+  <% @probabilities.each do |x| %>
+  
+  <tr>
+    <% x.each_with_index do |y, i| %>
+    <td><%= y %></td>
+    <%end%>
+  </tr>
+  
+  <%end%>
+</table> 
+
+
+<%= link_to 'Edit', edit_action_list_path(@action_list) %> |
+<%= link_to 'Back', action_lists_path %>

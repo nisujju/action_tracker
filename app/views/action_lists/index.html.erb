@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Select action name from below to analyse action</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @action_lists.each do |action_list| %>
+      <tr>
+        <td><%= action_list.name %></td>
+        <td><%= action_list.description %></td>
+        <td><%= link_to 'Analyse Action |', action_list %></td>
+        <td><%= link_to 'Edit Action |', edit_action_list_path(action_list) %></td>
+        <td><%= link_to 'Destroy', action_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Action list', new_action_list_path %>
