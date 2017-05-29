@@ -1,6 +1,7 @@
 Action Tracker
 
 Please visit https://pure-thicket-67263.herokuapp.com. This is homepage for this app.
+We have a two default user pqr and xyz and 5 action lists which are A, B, C, D and E. For testing the app please visit https://pure-thicket-67263.herokuapp.com/action_lists and select Analyse Action against task A. The user pqr has loggef Action B immediately after Action A and user xyz has immediately logged action D twice after Action A. As a result D's probability w.r.t A is 66.66% and B's probability is 33.33%. Same you can see after visiting the above mentioned link. To check the tasks logged in by a particular user visity /users and select user and task logged in by user in descending order is displayed i.e. tasks entered most recently is displayed first followed by others.
 
 Below are Model Details and DB structure
 
