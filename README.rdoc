@@ -1,4 +1,6 @@
-Action Tracker
+* Problem statement for this app is to design and develop a system that calculates the real time probability of an event. A even can be followed by any other event. If the following event occurs within 24 hrs than its immediate neighbour of the preceded event. If it occurs between 24 hrs to 7 days than weekly neighbour. If 8 days till 1 month then monthly neighbour. If 31 days till 1 year than yearly else lifetime neighbour. There can be any number of tasks logged on by a users. Also there are multiple users. Design a system that will calculate the probability of these tasks w.r.t a particular task and analyse them in real time. 
+
+Action Tracker :- This app consists of only backend logic to resolve this event probability calculations.
 
 Please visit https://pure-thicket-67263.herokuapp.com. This is homepage for this app.
 We have a two default user pqr and xyz and 5 action lists which are A, B, C, D and E. For testing the app please visit https://pure-thicket-67263.herokuapp.com/action_lists and select Analyse Action against task A. The user pqr has logged Action B immediately after Action A and user xyz has immediately logged action D twice after Action A. As a result D's immediate probability w.r.t A is 66.66% and B's immediate probability is 33.33%. Same you can see after visiting the above mentioned link. To check the tasks logged in by a particular user visit /users and select user. This will show you task logged in by user in descending order i.e. tasks entered most recently is displayed first followed by others.
